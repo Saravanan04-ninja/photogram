@@ -18,17 +18,17 @@ function validate_credential($username, $password){
     }
 }
 
-function signup($username, $password, $email, $phone)
+function signup($user, $pass, $email, $phone)
 {
 
-$servername = "mysql.selfmade.ninja";
+$servername = "mysql.selfmade.ninja:3306";
 $username = "Saravanan04";
 $password = "Saravanan123#";
 $dbname = "Saravanan04_newdb2";
-$port = "3306";
+
 
 // Create connection
-$conn = new mysqli($servername, $username, $password, $dbname, $port);
+$conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
@@ -37,7 +37,7 @@ if ($conn->connect_error) {
 
 
 $sql = "INSERT INTO `auth1` (`username`, `password`, `email`, `phone`, `blocked`, `active`)
-VALUES ('$username', '$password', '$email', '$phone', '0', '1')";
+VALUES ('$user', '$pass', '$email', '$phone', '0', '1')";
 $error = false;
 if ($conn->query($sql) === TRUE) {
   $error = false;

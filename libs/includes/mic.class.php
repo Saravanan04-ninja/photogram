@@ -32,4 +32,9 @@ class Mic{
     public function getModelproxy(){
         return $this->getmodel();
     }
+
+        public function __destruct(){
+        printf("destruct object...");
+        
+    }
 }
