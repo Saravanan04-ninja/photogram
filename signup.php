@@ -7,6 +7,8 @@
 <html lang="en" data-bs-theme="auto">
  <?load_template('_head');?>
   <body>
+
+
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
       <symbol id="check2" viewBox="0 0 16 16">
         <path
@@ -102,12 +104,12 @@
         </li>
       </ul>
     </div>
-   
+  
     <?load_template('_header');?>
     
     <main>
-  <? load_template('_body'); ?>
-  <? load_template('_photogram'); ?>
+  <? load_template('_signup'); ?>
+ 
     </main>
   <? load_template('_footer'); ?>
     <script
