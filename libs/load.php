@@ -1,6 +1,8 @@
 <?php
 
 include_once 'includes/mic.class.php';
+include_once 'includes/User.class.php';
+include_once 'includes/Database.class.php';
 
 function load_template($name){
 
@@ -20,21 +22,7 @@ function validate_credential($username, $password){
 
 function signup($user, $pass, $email, $phone)
 {
-
-$servername = "mysql.selfmade.ninja:3306";
-$username = "Saravanan04";
-$password = "Saravanan123#";
-$dbname = "Saravanan04_newdb2";
-
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
-    
-
+  $conn = Database::getconnection();
 
 $sql = "INSERT INTO `auth1` (`username`, `password`, `email`, `phone`, `blocked`, `active`)
 VALUES ('$user', '$pass', '$email', '$phone', '0', '1')";

@@ -42,6 +42,14 @@ print("\n".$mic1->getbrand());
 print("\n".$mic2->getbrand());
 
 
+ $conn = Database::getconnection();
+ $conn = Database::getconnection();
+  $conn = Database::getconnection();
+   $conn = Database::getconnection();
+    $conn = Database::getconnection();
+
+
+
 
 
 
