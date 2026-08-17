@@ -14,12 +14,12 @@ include 'libs/load.php';
 // print("_COOKIE\n");
 // print_r($_COOKIE);
 
-// if(signup("saravanan","password","saro@gmail.com","9876543210")){
-//     echo "success";
+if(signup("saravanan","password","saro@gmail.com","9876543210")){
+    echo "success";
 
-// }else{
-//     echo "fail";
-// }
+}else{
+    echo "fail";
+}
 
 // $mic = new Mic();
 
