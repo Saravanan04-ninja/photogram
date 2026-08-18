@@ -3,6 +3,9 @@
 include_once 'includes/mic.class.php';
 include_once 'includes/User.class.php';
 include_once 'includes/Database.class.php';
+include_once 'includes/Session.class.php';
+
+session::start();
 
 function load_template($name){
 

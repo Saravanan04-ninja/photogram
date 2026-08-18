@@ -1,7 +1,7 @@
 <pre>
 <?php
-session_start();
-setcookie("testcookie", "testvalue", time() + (86400 * 30), "/");
+
+// setcookie("testcookie", "testvalue", time() + (86400 * 30), "/");
 
 include 'libs/load.php';
 
@@ -21,13 +21,22 @@ print("_SESSION\n");
 print_r($_SESSION);
 
 
-if(isset($_SESSION['a'])){
-    print("A already exists... value: $_SESSION[a]\n");
-}else{
-    $_SESSION['a'] = time();
-    print("Assigning new value... value: $_SESSION[a]\n");
+if (isset($_GET['clear'])) {
+    printf("Clearing...\n");
+    Session::unset();
 }
 
+if (Session::isset('a')) {
+    printf("A already exists... Value: ".Session::get('a')."\n");
+} else {
+    Session::set('a', time());
+    printf("Assigning new value... Value: $_SESSION[a]\n");
+}
+
+if (isset($_GET['destroy'])) {
+    printf("Destroying...\n");
+    Session::destroy();
+}
 
 
 
