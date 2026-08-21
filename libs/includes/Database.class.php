@@ -19,7 +19,7 @@ class Database{
     if ($connection->connect_error) {
     die("Connection failed: " . $connection->connect_error);
 }else{
-    printf("This is returning...");
+    // printf("This is returning...");
     Database::$conn = $connection;
     return Database::$conn;
 }

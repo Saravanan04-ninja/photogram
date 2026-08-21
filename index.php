@@ -43,8 +43,8 @@
         data-bs-toggle="dropdown"
         aria-label="Toggle theme (auto)"
       >
-        <svg class="bi my-1 theme-icon-active" aria-hidden="true">
-          <use href="#circle-half"></use>
+        <!-- <svg class="bi my-1 theme-icon-active" aria-hidden="true">
+          <use href="#circle-half"></use> -->
         </svg>
         <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
       </button>
